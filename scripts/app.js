@@ -1,4 +1,5 @@
 console.log('Webpack up and running.....');
+var jquery = require('jquery');
 var angular = require('angular');
 
 var appModuleName = 'TrackerApp';

@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/hemantshelar/tracker.git"
   },
-  "author": "",
+  "author": "Hemant Shelar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hemantshelar/tracker/issues"
@@ -19,7 +19,9 @@
   "homepage": "https://github.com/hemantshelar/tracker#readme",
   "dependencies": {
     "angular": "^1.6.5",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "css-loader": "^0.28.4",
