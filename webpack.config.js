@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './scripts/app.js',
+    entry: ['./scripts/app.js'],
     output: {
         filename: './scripts/bundle.js'
     },
@@ -13,7 +13,7 @@ module.exports = {
             {
                 test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 loader: 'file-loader',
-            }
+            } 
         ]
     }
 }

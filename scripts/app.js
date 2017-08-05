@@ -1,5 +1,6 @@
 console.log('Webpack up and running.....');
-var jquery = require('jquery');
+
+window.jQuery = window.$ = require('jquery');
 var angular = require('angular');
 
 var appModuleName = 'TrackerApp';
@@ -16,3 +17,4 @@ angular.bootstrap(mainContainter,[appModuleName]);
 
 
 require('./../node_modules/bootstrap/dist/css/bootstrap.css');
+require('./../node_modules/bootstrap/dist/js/bootstrap.js');
