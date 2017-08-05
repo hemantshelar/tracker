@@ -1,24 +1,40 @@
-<table class="table">
+<input type='text' id="eventDate"> <br/>
+Event cost : <i class="fa fa-lg fa-usd"></i> {{vm.eventCost}}
+<table class="table table-striped table-bordered">
     <thead>
         <tr>
             <td>Id</td>
             <td>Name</td>
-            <td>Attending?</td>
+            <td>Going?</td>
+            <td>Booking?</td>
+            <td>Contri Paid?</td>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>Hemant</td>
+        <tr ng-repeat="member in vm.members">
+            <td>{{member.id}}</td>
+            <td>{{member.name}}</td>
             <td> 
                 <div class="btn-group">
                     <!-- <button class="btn btn-primary">Yes</button>
                     <button class="btn btn-warning">No</button> -->
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    <!-- <span class="glyphicon glyphicon-thumbs-up" style="font-size:25px"></span>
+                    <span class="glyphicon glyphicon-thumbs-down" style="font-size:25px"></span>
+                    <span class="glyphicon glyphicon-question" style="font-size:25px"></span>
+                    <span class="glyphicon glyphicon-mood_bad" style="font-size:25px"></span>
+                    <span class="glyphicon glyphicon-mood" style="font-size:25px"></span> -->
+                     <i ng-class='vm.getYesClass(member)' ng-click="member.setAttending(member)"></i>
+                     <i  ng-hide="true" ng-class='vm.getNoClass(member)' ng-click="member.setNotAttending(member)"></i> 
                 </div>
-            </td>            
+            </td>
+            <td>
+                <i class="fa fa-2x fa-usd"></i>
+            </td>
+            <td>
+                <i ng-class='vm.getContriPaidClass(member)' ng-click="vm.setContriPaid(member)"></i>
+            </td>
         </tr>
-       
     </tbody>
 </table>
+
+There are {{vm.getTotalAttending()}} members attending event.
